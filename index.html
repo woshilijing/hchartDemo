@@ -27,13 +27,17 @@
         },
         yAxis: {
             title: {
-                text: '值'
-            }
+                text: '等级'
+            },
+            //categories:['0:不具备','1:一般 ','2:良好','3:优秀']
+            visible:false
         },
+
         tooltip: {
-            crosshairs: true,
-            shared: true
+            enabled: false,
         },
+        exporting: { enabled: false },//隐藏导出图片
+        credits: { enabled: false },//隐藏highcharts的站点标志
         plotOptions: {
             spline: {
                 marker: {
