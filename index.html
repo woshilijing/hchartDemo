@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"><link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* css 代码  */
+    </style>
+    <script src="https://img.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://img.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+</head>
+<body>
+<div id="container" style="min-width:400px;height:400px"></div>
+<script>
+    var chart = Highcharts.chart('container', {
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: '洗衣材料对比'
+        },
+      /*  subtitle: {
+            text: '数据来源: WorldClimate.com'
+        },*/
+        xAxis: {
+            categories: ['去污能力', '除菌能力', '衣物友好度', '皮肤友好', '水电消耗', '异味消除',
+                '设备友好', '内衣洗涤', '外衣洗涤', '运动衣洗涤', '人力消耗', '综合']
+        },
+        yAxis: {
+            title: {
+                text: '值'
+            },
+           /* labels: {
+                formatter: function () {
+                    return this.value + '°';
+                }
+            }*/
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: '草木灰',
+            data: [1, 0, 1, 1, 1, 1, 3, 1, 1, 1, 1,1.1]
+           /* marker: {
+                symbol: 'square'
+            },
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, {
+                y: 26.5,
+                marker: {
+                    symbol: 'url(https://www.highcharts.com/demo/gfx/sun.png)'
+                }
+            }, 23.3, 18.3, 13.9, 9.6]*/
+        }, {
+            name: '肥皂',
+            data: [2,1,2,1,1,1,2,2,1,1,1,1.4]
+           /* marker: {
+                symbol: 'diamond'
+            },
+            data: [{
+                y: 3.9,
+                marker: {
+                    symbol: 'url(https://www.highcharts.com/demo/gfx/snow.png)'
+                }
+            }, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]*/
+        },{
+            name: '洗衣粉',
+            data: [3,0,1,1,1,1,1,1,3,1,1,1.3]
+        },{
+            name: '洗衣液',
+            data: [3,0,2,2,2,2,2,2,3,1,1,1.8]
+        },{
+            name: '洗衣包',
+            data: [2,3,3,3,3,3,3,3,2,3,3,2.8]
+        }
+        ]
+    });
+
+</script>
+</body>
+</html>
